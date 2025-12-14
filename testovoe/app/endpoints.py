@@ -177,7 +177,7 @@ async def get_ai_response(
 
         logger.info(f"[{request_id}] Request processed successfully")
         if from_cache:
-            logger.info(f"[{request_id}] ⚡ Ответ получен из синхронного кэша")
+            logger.info(f"[{request_id}] ⚡ Ответ получен из кэша")
         else:
             logger.info(f"[{request_id}] ♻️  Выполнен новый запрос к AI")
         return templates.TemplateResponse("index.html", context)
