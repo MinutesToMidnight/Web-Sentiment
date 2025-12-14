@@ -140,33 +140,68 @@ class Model:
                     }
                 )
 
-                response.raise_for_status()
+                status = response.status_code
+                headers = dict(response.headers)
+                # Попытка безопасно получить тело (json или текст)
+                try:
+                    data = response.json()
+                    body_preview = str(data)
+                except Exception:
+                    try:
+                        body_text = await response.aread()
+                        body_preview = body_text.decode(errors="ignore")[:1000]
+                    except Exception:
+                        body_preview = "<unreadable body>"
 
-                data = response.json()
+                logger.debug("AI provider response | status=%s headers=%s body_preview=%s", status, headers,
+                             body_preview)
 
+                # Если провайдер вернул ошибку в HTTP статусе
+                if status == 429:
+                    retry_after = headers.get("Retry-After")
+                    logger.warning("AI provider rate limited (429). Retry-After=%s body=%s", retry_after, body_preview)
+                    # Пробрасываем 429 дальше с подсказкой
+                    raise HTTPException(status_code=429,
+                                        detail=f"AI provider rate limit. Retry-After: {retry_after or 'unknown'}")
+
+                if 400 <= status < 500:
+                    # Клиентская ошибка провайдера — пробрасываем её код и сообщение (если есть)
+                    provider_msg = None
+                    if isinstance(data, dict):
+                        provider_msg = data.get("error") or data.get("message")
+                    logger.error("AI provider client error: %s | body=%s", status, body_preview)
+                    raise HTTPException(status_code=status, detail=f"AI service client error: {provider_msg or status}")
+
+                if status >= 500:
+                    logger.error("AI provider server error: %s | body=%s", status, body_preview)
+                    raise HTTPException(status_code=502, detail=f"AI service returned server error: {status}")
+
+                # На этом этапе статус 2xx — проверяем содержимое
+                if not isinstance(data, dict):
+                    logger.error("Unexpected response format from AI provider: %s", body_preview)
+                    raise HTTPException(status_code=502, detail="Invalid response from AI service")
+
+                # Если провайдер вернул структуру error внутри JSON
                 if "error" in data:
                     err = data["error"]
-                    provider_msg = err.get("message", "Provider returned an error")
-                    provider_code = err.get("code", "unknown")
+                    provider_msg = err.get("message", "Provider returned an error") if isinstance(err, dict) else str(
+                        err)
+                    provider_code = err.get("code", "unknown") if isinstance(err, dict) else "unknown"
+                    logger.error("Provider error in JSON: %s - %s", provider_code, provider_msg)
 
-                    logger.error("Provider error: %s - %s", provider_code, provider_msg)
-
-                    # Маппинг кодов ошибок провайдера в HTTP статусы
                     error_map = {
                         "rate_limit_exceeded": 429,
                         "invalid_api_key": 401,
                         "insufficient_quota": 402,
                         "model_not_found": 404,
                     }
-
                     status_code = error_map.get(provider_code, 502)
-                    raise HTTPException(
-                        status_code=status_code,
-                        detail=f"AI service error: {provider_msg}"
-                    )
+                    raise HTTPException(status_code=status_code, detail=f"AI service error: {provider_msg}")
 
+                # Проверяем наличие choices
                 if "choices" not in data or not data["choices"]:
-                    raise HTTPException(status_code=502, detail="Invalid response from AI service")
+                    logger.warning("AI provider returned no choices | body=%s", body_preview)
+                    raise HTTPException(status_code=502, detail="Invalid response from AI service: no choices returned")
 
                 result = data['choices'][0]['message']['content']
 
@@ -184,6 +219,3 @@ class Model:
             except httpx.RequestError as e:
                 logger.error("Request error: %s", e)
                 raise HTTPException(status_code=503, detail="AI service unavailable")
-            except httpx.HTTPStatusError as e:
-                logger.error("HTTP error from AI service: %s", e.response.status_code)
-                raise HTTPException(status_code=502, detail=f"AI service returned error: {e.response.status_code}")
