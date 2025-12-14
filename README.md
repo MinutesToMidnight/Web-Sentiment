@@ -14,7 +14,6 @@ It is a small containerized FastAPI application for sentiment classification, bu
 ## Quick start
 
 ### 1. Clone the repository
-(bash)
 ```bash
 # bash
 git clone https://github.com/MinutesToMidnight/Web-Sentiment.git
