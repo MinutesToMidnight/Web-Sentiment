@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Analyzer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Анимация для появления результата */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-enter {
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Стили для кнопок */
+        .option-btn {
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .option-btn:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .option-btn.active {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .option-btn:not(.active):hover {
+            background-color: rgba(59, 130, 246, 0.1);
+        }
+
+        /* Стили для кнопок режимов */
+        .mode-btn {
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .mode-btn:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .mode-btn.active {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .mode-btn:not(.active):hover {
+            background-color: rgba(59, 130, 246, 0.1);
+        }
+
+        /* Стили для скроллбара */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 min-h-screen text-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Левая боковая панель -->
+        <div class="w-80 bg-gray-900/70 border-r border-gray-700/50 p-6 backdrop-blur-sm">
+            <!-- Заголовок и подзаголовок -->
+            <div class="mb-8">
+                <p class="text-blue-400 font-semibold mb-1">AI Playground</p>
+                <h1 class="text-2xl font-bold text-white">Text Analyzer</h1>
+                <p class="text-sm text-gray-300 mt-2">
+                    {% if result %}
+                        Analysis complete!
+                    {% else %}
+                        Enter text and analyze with AI.
+                    {% endif %}
+                </p>
+            </div>
+
+            <!-- Выбор модели -->
+            <div class="mb-8">
+                <p class="text-sm font-semibold text-white mb-3 uppercase tracking-wider text-gray-400">AI Models</p>
+                <div class="space-y-2" id="models-container">
+                    {% for name, url in model_urls.items() %}
+                    <div class="option-btn {% if name == selected_model %}active border-blue-500{% else %}border-gray-700{% endif %} bg-gray-800/50 border rounded-lg p-3 hover:border-gray-600"
+                         data-model-name="{{ name }}"
+                         onclick="selectModel('{{ name }}')">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="font-semibold text-white">{{ name }}</div>
+                                {% if url %}
+                                <div class="text-xs opacity-80 mt-1 truncate max-w-[180px]" title="{{ url }}">
+                                    {{ url[:25] }}{% if url|length > 25 %}...{% endif %}
+                                </div>
+                                {% else %}
+                                <div class="text-xs text-gray-400 mt-1">Default endpoint</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Режимы анализа (ДИНАМИЧЕСКИЕ) -->
+            <div>
+                <p class="text-sm font-semibold text-white mb-3 uppercase tracking-wider text-gray-400">Analysis Mode</p>
+                <div class="space-y-2" id="modes-container">
+                    {% for mode_item in modes %}
+                    {% set mode_lower = mode_item.lower() %}
+                    <button type="button"
+                            id="mode-{{ mode_lower }}-btn"
+                            class="mode-btn w-full text-left px-4 py-3 border rounded-lg font-medium hover:border-gray-600
+                                   {% if (mode|lower) == mode_lower or (not result and mode_lower == 'summary') %}
+                                   active border-blue-500 bg-blue-600 text-white
+                                   {% else %}
+                                   border-gray-700 bg-gray-800/50 text-gray-300
+                                   {% endif %}"
+                            data-mode-value="{{ mode_lower }}">
+                        <div>
+                            <div class="font-semibold">{{ mode_item }}</div>
+                            <div class="text-xs opacity-80 mt-1">
+                                {% if mode_lower == 'summary' %}
+                                    Generate concise summary
+                                {% elif mode_lower == 'labels' %}
+                                    Extract categories & tags
+                                {% else %}
+                                    {{ mode_item }} analysis mode
+                                {% endif %}
+                            </div>
+                        </div>
+                    </button>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Статус и информация -->
+            <div class="mt-auto pt-8 border-t border-gray-700/50">
+                <div class="text-xs text-gray-400">
+                    <p id="selected-model-info">
+                        {% if selected_model %}
+                        Selected: <span class="text-blue-300 font-medium">{{ selected_model }}</span>
+                        {% else %}
+                        Ready to analyze text with AI.
+                        {% endif %}
+                    </p>
+                    {% if selected_model and model_urls.get(selected_model) %}
+                    <p class="mt-1 truncate" title="{{ model_urls[selected_model] }}" id="model-url-info">
+                        Endpoint: {{ model_urls[selected_model][:30] }}{% if model_urls[selected_model]|length > 30 %}...{% endif %}
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Основная область контента -->
+        <div class="flex-1 p-6 bg-gradient-to-br from-gray-900 to-gray-950">
+            <div class="max-w-4xl mx-auto">
+                <!-- Форма и результаты в одном окне -->
+                <form method="post" action="/" class="space-y-6">
+                    <!-- Скрытые поля -->
+                    <input type="hidden" id="mode" name="mode" value="{{ (mode or 'summary')|lower }}">
+                    <input type="hidden" id="model-input" name="model" value="{{ selected_model or (model_urls.keys()|first) }}">
+
+                    <!-- Текстовое поле -->
+                    <div>
+                        <label class="block text-sm font-semibold text-white mb-2">
+                            Text to Analyze
+                        </label>
+                        <textarea name="message" rows="12"
+                                  class="w-full px-4 py-3 rounded-lg bg-gray-800/70 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                  placeholder="Paste or type text here...">{{ original_text }}</textarea>
+                    </div>
+
+                    <!-- Кнопка анализа -->
+                    <div class="flex items-center justify-between">
+                        <div class="text-sm text-gray-400">
+                            <span id="char-count">{{ original_text|length if original_text else 16 }}</span> characters
+                        </div>
+                        <button type="submit"
+                                class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg shadow-blue-900/30 transition-all duration-200 hover:shadow-xl hover:shadow-blue-900/40 hover:scale-[1.02] active:scale-[0.98]">
+                            {% if result %}
+                                Re-analyze Text
+                            {% else %}
+                                Analyze Text
+                            {% endif %}
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Результат анализа (отображается под формой) -->
+                {% if result %}
+                <div class="mt-8 result-enter">
+                    <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-white">Analysis Result</h3>
+                                <div class="flex items-center gap-2">
+                                    <!-- СТАТУС КЭША -->
+                                {% if from_cache %}
+                                <span class="text-sm bg-green-900/30 text-green-300 px-3 py-1 rounded-full border border-green-700/50
+                                             flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    From Cache
+                                </span>
+                                {% else %}
+                                <span class="text-sm bg-yellow-900/30 text-yellow-300 px-3 py-1 rounded-full border border-yellow-700/50
+                                             flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Live Response
+                                </span>
+                                {% endif %}
+                                    <span class="text-sm bg-blue-900/30 text-blue-300 px-3 py-1 rounded-full border border-blue-700/50">Model: {{ selected_model }}</span>
+                                    <span class="text-sm bg-purple-900/30 text-purple-300 px-3 py-1 rounded-full border border-purple-700/50">Mode: {{ mode|title }}</span>
+                                    <button onclick="copyToClipboard()"
+                                            class="text-sm px-3 py-1 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-all duration-200 border border-gray-600 hover:border-gray-500">
+                                        Copy
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Результат анализа -->
+                            <div>
+                                <h4 class="text-md font-semibold text-white mb-3">AI Analysis</h4>
+                                <div class="bg-gray-900/70 border border-gray-700 p-4 rounded-lg">
+                                    <pre class="text-gray-200 whitespace-pre-wrap font-mono text-sm leading-relaxed">{{ result }}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Сообщение об ошибке -->
+                {% if error %}
+                <div id="error" class="mt-6 p-4 bg-red-900/20 border border-red-700/30 rounded-md backdrop-blur-sm">
+                    <p class="text-red-200">{{ error }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Переключение режимов анализа (ОБНОВЛЕНА для динамических режимов)
+        function setActiveMode(mode) {
+            // Обновляем все кнопки режимов
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                const isActive = btn.dataset.modeValue === mode;
+                btn.classList.toggle('active', isActive);
+                if (isActive) {
+                    btn.classList.add('border-blue-500', 'bg-blue-600', 'text-white');
+                    btn.classList.remove('border-gray-700', 'bg-gray-800/50', 'text-gray-300');
+                } else {
+                    btn.classList.remove('border-blue-500', 'bg-blue-600', 'text-white');
+                    btn.classList.add('border-gray-700', 'bg-gray-800/50', 'text-gray-300');
+                }
+            });
+
+            // Обновляем скрытое поле
+            document.getElementById('mode').value = mode;
+        }
+
+        // Выбор модели
+        function selectModel(modelName) {
+            // Обновляем визуальное выделение
+            document.querySelectorAll('#models-container .option-btn').forEach(option => {
+                const isSelected = option.dataset.modelName === modelName;
+                option.classList.toggle('active', isSelected);
+                if (isSelected) {
+                    option.classList.add('border-blue-500');
+                    option.classList.remove('border-gray-700', 'hover:border-gray-600');
+                } else {
+                    option.classList.remove('border-blue-500');
+                    option.classList.add('border-gray-700', 'hover:border-gray-600');
+                }
+            });
+
+            // Обновляем скрытое поле модели в форме
+            document.getElementById('model-input').value = modelName;
+
+            // Обновляем информацию о выбранной модели
+            updateModelInfo(modelName);
+        }
+
+        // Обновление информации о модели
+        function updateModelInfo(modelName) {
+            const modelElement = document.querySelector(`.option-btn[data-model-name="${modelName}"]`);
+            if (!modelElement) return;
+
+            const modelInfo = document.getElementById('selected-model-info');
+            const urlInfo = document.getElementById('model-url-info');
+
+            if (modelInfo) {
+                modelInfo.innerHTML = `Selected: <span class="text-blue-300 font-medium">${modelName}</span>`;
+            }
+
+            if (urlInfo) {
+                const url = modelElement.querySelector('.text-xs')?.title || '';
+                const displayUrl = url.length > 30 ? url.substring(0, 30) + '...' : url;
+                urlInfo.textContent = url ? `Endpoint: ${displayUrl}` : '';
+                urlInfo.title = url;
+            }
+        }
+
+        // Счетчик символов
+        function updateCharCount() {
+            const textarea = document.querySelector('textarea[name="message"]');
+            const charCount = document.getElementById('char-count');
+            if (textarea && charCount) {
+                charCount.textContent = textarea.value.length;
+            }
+        }
+
+        // Копирование результата в буфер обмена
+        function copyToClipboard() {
+            const resultElement = document.querySelector('pre.text-gray-200');
+            if (!resultElement) {
+                console.error('Result element not found');
+                return;
+            }
+
+            // Получаем текст из элемента с результатом
+            const resultText = resultElement.textContent || resultElement.innerText;
+
+            // Получаем информацию о модели и режиме
+            const modelElement = document.querySelector('.bg-blue-900\\/30');
+            const modeElement = document.querySelector('.bg-purple-900\\/30');
+
+            let modelText = '{{ selected_model }}';
+            let modeText = '{{ mode|title }}';
+
+            if (modelElement) {
+                modelText = modelElement.textContent.replace('Model: ', '');
+            }
+
+            if (modeElement) {
+                modeText = modeElement.textContent.replace('Mode: ', '');
+            }
+
+            const fullText = `AI Analysis Result\n\nModel: ${modelText}\nMode: ${modeText}\n\n${resultText}`;
+
+            navigator.clipboard.writeText(fullText).then(() => {
+                // Временное уведомление о успешном копировании
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.remove('bg-gray-700', 'hover:bg-gray-600', 'border-gray-600', 'hover:border-gray-500');
+                button.classList.add('bg-green-700', 'hover:bg-green-600', 'border-green-600', 'hover:border-green-500');
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('bg-green-700', 'hover:bg-green-600', 'border-green-600', 'hover:border-green-500');
+                    button.classList.add('bg-gray-700', 'hover:bg-gray-600', 'border-gray-600', 'hover:border-gray-500');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy to clipboard');
+            });
+        }
+
+        // Инициализация при загрузке страницы (ОБНОВЛЕНА)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Назначаем обработчики на кнопки режимов
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    setActiveMode(this.dataset.modeValue);
+                });
+            });
+
+            // Назначаем обработчики на модели
+            document.querySelectorAll('#models-container .option-btn').forEach(option => {
+                option.addEventListener('click', function() {
+                    selectModel(this.dataset.modelName);
+                });
+            });
+
+            // Устанавливаем активный режим на основе значения из шаблона
+            {% if mode %}
+                setActiveMode('{{ (mode or "summary")|lower }}');
+            {% endif %}
+
+            // Обновление счетчика символов
+            const textarea = document.querySelector('textarea[name="message"]');
+            if (textarea) {
+                textarea.addEventListener('input', updateCharCount);
+                updateCharCount(); // Инициализация
+
+                // Автофокус на текстовое поле (если нет результата)
+                {% if not result %}
+                    setTimeout(() => {
+                        textarea.focus();
+                        // Выделяем весь текст для удобства
+                        textarea.select();
+                    }, 100);
+                {% endif %}
+            }
+
+            // Обновляем информацию о выбранной модели
+            {% if selected_model %}
+                updateModelInfo('{{ selected_model }}');
+            {% endif %}
+
+            // Прокрутка к результату, если он есть
+            {% if result %}
+                setTimeout(() => {
+                    const resultElement = document.querySelector('.result-enter');
+                    if (resultElement) {
+                        resultElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            {% endif %}
+        });
+    </script>
+</body>
+</html>

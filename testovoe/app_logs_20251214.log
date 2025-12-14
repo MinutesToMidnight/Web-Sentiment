@@ -1,0 +1,439 @@
+2025-12-14 15:16:52,749 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 15:16:52,749 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 15:16:52,749 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 15:16:52,770 - app.endpoints - INFO - [52769973] GET / - Client: testclient
+2025-12-14 15:16:52,771 - app.endpoints - INFO - [52771073] GET / - Rendering form
+2025-12-14 15:16:52,771 - app.endpoints - INFO - [52771073] Form rendered successfully
+2025-12-14 15:16:52,771 - app.endpoints - ERROR - [52771073] Error in form rendering: 'index.html' not found in search path: 'templates'
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 91, in form
+    return templates.TemplateResponse("index.html", default_context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'index.html' not found in search path: 'templates'
+2025-12-14 15:16:52,773 - app.endpoints - ERROR - [52769973] GET / - Exception: 'error.html' not found in search path: 'templates' - Time: 0.004s
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 91, in form
+    return templates.TemplateResponse("index.html", default_context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'index.html' not found in search path: 'templates'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 327, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 106, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 430, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\app\endpoints.py", line 95, in form
+    return templates.TemplateResponse("error.html", {
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+        "request": request,
+        ^^^^^^^^^^^^^^^^^^^
+        "error": "Service temporarily unavailable"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    }, status_code=500)
+    ^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'error.html' not found in search path: 'templates'
+2025-12-14 15:16:53,153 - app.endpoints - INFO - [53153703] POST / - Client: testclient
+2025-12-14 15:16:53,155 - app.endpoints - INFO - [53155754] POST / - Processing request | Model: Mistral, Mode: Summary, Message length: 25 chars, Preview: 'Hello world, test message'
+2025-12-14 15:16:53,155 - app.endpoints - INFO - [53155754] Validation successful
+2025-12-14 15:16:53,156 - app.endpoints - INFO - [53155754] Calling AI provider: Mistral/Summary
+2025-12-14 15:16:53,156 - app.endpoints - INFO - [53155754] AI response received in 0.00s
+2025-12-14 15:16:53,156 - app.endpoints - INFO - [53155754] Request processed successfully
+2025-12-14 15:16:53,156 - app.endpoints - ERROR - [53155754] Unexpected error in get_ai_response: 'index.html' not found in search path: 'templates' | Model: Mistral, Mode: Summary
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 176, in get_ai_response
+    return templates.TemplateResponse("index.html", context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'index.html' not found in search path: 'templates'
+2025-12-14 15:16:53,157 - app.endpoints - ERROR - [53153703] POST / - Exception: 'index.html' not found in search path: 'templates' - Time: 0.004s
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 176, in get_ai_response
+    return templates.TemplateResponse("index.html", context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'index.html' not found in search path: 'templates'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 327, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 106, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 430, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\app\endpoints.py", line 245, in get_ai_response
+    return templates.TemplateResponse("index.html", context, status_code=500)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'index.html' not found in search path: 'templates'
+2025-12-14 15:16:53,429 - app.endpoints - INFO - [53429171] POST / - Client: testclient
+2025-12-14 15:16:53,430 - app.endpoints - WARNING - [53430065] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 15:16:53,430 - app.endpoints - INFO - [53430065] Returning validation error page
+2025-12-14 15:16:53,430 - app.endpoints - ERROR - [53429171] POST / - Exception: 'index.html' not found in search path: 'templates' - Time: 0.001s
+Traceback (most recent call last):
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 106, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 472, in app
+    raise validation_error
+fastapi.exceptions.RequestValidationError: 1 validation error:
+  {'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}
+
+  File "E:\Python\testovoe\app\endpoints.py", line 101, in get_ai_response
+    POST /
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 327, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 59, in wrapped_app
+    response = await handler(conn, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\app\endpoints.py", line 309, in request_validation_exception_handler
+    return templates.TemplateResponse("index.html", context, status_code=422)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'index.html' not found in search path: 'templates'
+2025-12-14 15:16:53,667 - app.endpoints - INFO - [53667093] POST / - Client: testclient
+2025-12-14 15:16:53,667 - app.endpoints - INFO - [53667723] POST / - Processing request | Model: invalid-model-name, Mode: Summary, Message length: 9 chars, Preview: 'Some text'
+2025-12-14 15:16:53,667 - app.endpoints - WARNING - [53667723] Validation Error: 1 validation error for PromptRequest
+model
+  Value error, Model must be one of: Mistral, Chimera, GPT-OSS. Got: invalid-model-name [type=value_error, input_value='invalid-model-name', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error | Model: invalid-model-name, Mode: Summary, Message length: 9
+2025-12-14 15:16:53,668 - app.endpoints - ERROR - [53667093] POST / - Exception: 'index.html' not found in search path: 'templates' - Time: 0.001s
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 131, in get_ai_response
+    req = PromptRequest(message=message, mode=mode, model=model)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PromptRequest
+model
+  Value error, Model must be one of: Mistral, Chimera, GPT-OSS. Got: invalid-model-name [type=value_error, input_value='invalid-model-name', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 327, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 106, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 430, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\app\endpoints.py", line 201, in get_ai_response
+    return templates.TemplateResponse("index.html", context, status_code=422)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'index.html' not found in search path: 'templates'
+2025-12-14 15:19:39,250 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 15:19:39,250 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 15:19:39,250 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 15:20:22,386 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 15:20:22,386 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 15:20:22,386 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 15:20:22,411 - app.endpoints - INFO - [22410961] GET / - Client: testclient
+2025-12-14 15:20:22,412 - app.endpoints - INFO - [22412022] GET / - Rendering form
+2025-12-14 15:20:22,412 - app.endpoints - INFO - [22412022] Form rendered successfully
+2025-12-14 15:20:22,416 - app.endpoints - INFO - [22410961] GET / - Status: 200 - Time: 0.006s
+2025-12-14 15:20:22,422 - app.endpoints - INFO - [22422914] POST / - Client: testclient
+2025-12-14 15:20:22,425 - app.endpoints - INFO - [22424988] POST / - Processing request | Model: Mistral, Mode: Summary, Message length: 25 chars, Preview: 'Hello world, test message'
+2025-12-14 15:20:22,425 - app.endpoints - INFO - [22424988] Validation successful
+2025-12-14 15:20:22,425 - app.endpoints - INFO - [22424988] Calling AI provider: Mistral/Summary
+2025-12-14 15:20:22,425 - app.endpoints - INFO - [22424988] AI response received in 0.00s
+2025-12-14 15:20:22,425 - app.endpoints - INFO - [22424988] Request processed successfully
+2025-12-14 15:20:22,428 - app.endpoints - INFO - [22422914] POST / - Status: 200 - Time: 0.006s
+2025-12-14 15:20:22,434 - app.endpoints - INFO - [22434417] POST / - Client: testclient
+2025-12-14 15:20:22,435 - app.endpoints - WARNING - [22435255] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 15:20:22,435 - app.endpoints - INFO - [22435255] Returning validation error page
+2025-12-14 15:20:22,438 - app.endpoints - INFO - [22434417] POST / - Status: 422 - Time: 0.004s
+2025-12-14 15:20:22,543 - app.endpoints - INFO - [22543581] POST / - Client: testclient
+2025-12-14 15:20:22,544 - app.endpoints - INFO - [22544201] POST / - Processing request | Model: invalid-model-name, Mode: Summary, Message length: 9 chars, Preview: 'Some text'
+2025-12-14 15:20:22,544 - app.endpoints - WARNING - [22544201] Validation Error: 1 validation error for PromptRequest
+model
+  Value error, Model must be one of: Mistral, Chimera, GPT-OSS. Got: invalid-model-name [type=value_error, input_value='invalid-model-name', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error | Model: invalid-model-name, Mode: Summary, Message length: 9
+2025-12-14 15:20:22,547 - app.endpoints - INFO - [22543581] POST / - Status: 422 - Time: 0.004s
+2025-12-14 15:21:56,925 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 15:21:56,925 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 15:21:56,926 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 15:21:56,950 - app.endpoints - INFO - [56949951] GET / - Client: testclient
+2025-12-14 15:21:56,951 - app.endpoints - INFO - [56951030] GET / - Rendering form
+2025-12-14 15:21:56,951 - app.endpoints - INFO - [56951030] Form rendered successfully
+2025-12-14 15:21:56,955 - app.endpoints - INFO - [56949951] GET / - Status: 200 - Time: 0.006s
+2025-12-14 15:21:56,962 - app.endpoints - INFO - [56962106] POST / - Client: testclient
+2025-12-14 15:21:56,964 - app.endpoints - INFO - [56964070] POST / - Processing request | Model: Mistral, Mode: Summary, Message length: 25 chars, Preview: 'Hello world, test message'
+2025-12-14 15:21:56,964 - app.endpoints - INFO - [56964070] Validation successful
+2025-12-14 15:21:56,964 - app.endpoints - INFO - [56964070] Calling AI provider: Mistral/Summary
+2025-12-14 15:21:56,964 - app.endpoints - INFO - [56964070] AI response received in 0.00s
+2025-12-14 15:21:56,964 - app.endpoints - INFO - [56964070] Request processed successfully
+2025-12-14 15:21:56,967 - app.endpoints - INFO - [56962106] POST / - Status: 200 - Time: 0.006s
+2025-12-14 15:21:56,973 - app.endpoints - INFO - [56973602] POST / - Client: testclient
+2025-12-14 15:21:56,974 - app.endpoints - WARNING - [56974450] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 15:21:56,974 - app.endpoints - INFO - [56974450] Returning validation error page
+2025-12-14 15:21:56,977 - app.endpoints - INFO - [56973602] POST / - Status: 422 - Time: 0.004s
+2025-12-14 15:21:56,982 - app.endpoints - INFO - [56982828] POST / - Client: testclient
+2025-12-14 15:21:56,983 - app.endpoints - INFO - [56983440] POST / - Processing request | Model: invalid-model-name, Mode: Summary, Message length: 9 chars, Preview: 'Some text'
+2025-12-14 15:21:56,983 - app.endpoints - WARNING - [56983440] Validation Error: 1 validation error for PromptRequest
+model
+  Value error, Model must be one of: Mistral, Chimera, GPT-OSS. Got: invalid-model-name [type=value_error, input_value='invalid-model-name', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error | Model: invalid-model-name, Mode: Summary, Message length: 9
+2025-12-14 15:21:56,986 - app.endpoints - INFO - [56982828] POST / - Status: 422 - Time: 0.004s

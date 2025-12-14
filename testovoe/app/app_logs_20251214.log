@@ -1,0 +1,683 @@
+2025-12-14 13:27:03,579 - __main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:27:03,579 - __main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:27:03,579 - __main__ - INFO - Number of models configured: 3
+2025-12-14 13:27:03,589 - __main__ - INFO - ==================================================
+2025-12-14 13:27:03,589 - __main__ - INFO - Starting FastAPI application
+2025-12-14 13:27:03,589 - __main__ - INFO - ==================================================
+2025-12-14 13:27:04,616 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:27:04,617 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:27:04,622 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 13:27:04,683 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:27:04,683 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:27:04,683 - endpoints - INFO - Number of models configured: 3
+2025-12-14 13:27:13,561 - endpoints - INFO - [13561338] POST / - Client: 127.0.0.1
+2025-12-14 13:27:13,566 - endpoints - WARNING - [13566056] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:27:13,566 - endpoints - INFO - [13566056] Returning validation error page
+2025-12-14 13:27:13,591 - endpoints - INFO - [13561338] POST / - Status: 422 - Time: 0.030s
+2025-12-14 13:27:22,590 - endpoints - INFO - [22590005] POST / - Client: 127.0.0.1
+2025-12-14 13:27:22,591 - endpoints - WARNING - [22591456] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:27:22,591 - endpoints - INFO - [22591456] Returning validation error page
+2025-12-14 13:27:22,592 - endpoints - INFO - [22590005] POST / - Status: 422 - Time: 0.002s
+2025-12-14 13:27:23,780 - endpoints - INFO - [23780717] POST / - Client: 127.0.0.1
+2025-12-14 13:27:23,782 - endpoints - WARNING - [23782253] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:27:23,782 - endpoints - INFO - [23782253] Returning validation error page
+2025-12-14 13:27:23,783 - endpoints - INFO - [23780717] POST / - Status: 422 - Time: 0.002s
+2025-12-14 13:27:24,638 - endpoints - INFO - [24638470] POST / - Client: 127.0.0.1
+2025-12-14 13:27:24,640 - endpoints - WARNING - [24639997] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:27:24,640 - endpoints - INFO - [24639997] Returning validation error page
+2025-12-14 13:27:24,641 - endpoints - INFO - [24638470] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:27:25,239 - endpoints - INFO - [25239313] POST / - Client: 127.0.0.1
+2025-12-14 13:27:25,241 - endpoints - WARNING - [25241311] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:27:25,241 - endpoints - INFO - [25241311] Returning validation error page
+2025-12-14 13:27:25,242 - endpoints - INFO - [25239313] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:27:25,736 - endpoints - INFO - [25736412] POST / - Client: 127.0.0.1
+2025-12-14 13:27:25,737 - endpoints - WARNING - [25737806] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:27:25,738 - endpoints - INFO - [25737806] Returning validation error page
+2025-12-14 13:27:25,738 - endpoints - INFO - [25736412] POST / - Status: 422 - Time: 0.002s
+2025-12-14 13:27:26,200 - endpoints - INFO - [26200547] POST / - Client: 127.0.0.1
+2025-12-14 13:27:26,201 - endpoints - WARNING - [26201915] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:27:26,202 - endpoints - INFO - [26201915] Returning validation error page
+2025-12-14 13:27:26,203 - endpoints - INFO - [26200547] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:30:15,646 - endpoints - INFO - [15646814] POST / - Client: 127.0.0.1
+2025-12-14 13:30:15,648 - endpoints - WARNING - [15648556] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:30:15,648 - endpoints - INFO - [15648556] Returning validation error page
+2025-12-14 13:30:15,649 - endpoints - INFO - [15646814] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:30:18,637 - endpoints - INFO - [18637353] POST / - Client: 127.0.0.1
+2025-12-14 13:30:18,639 - endpoints - WARNING - [18639552] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:30:18,639 - endpoints - INFO - [18639552] Returning validation error page
+2025-12-14 13:30:18,641 - endpoints - INFO - [18637353] POST / - Status: 422 - Time: 0.004s
+2025-12-14 13:30:23,350 - endpoints - INFO - [23350472] POST / - Client: 127.0.0.1
+2025-12-14 13:30:23,352 - endpoints - WARNING - [23351965] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:30:23,352 - endpoints - INFO - [23351965] Returning validation error page
+2025-12-14 13:30:23,353 - endpoints - INFO - [23350472] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:31:17,082 - endpoints - INFO - [17082076] POST / - Client: 127.0.0.1
+2025-12-14 13:31:17,083 - endpoints - INFO - [17083587] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 6 chars, Preview: 'Lonely'
+2025-12-14 13:31:17,084 - endpoints - INFO - [17083587] Validation successful
+2025-12-14 13:31:17,084 - endpoints - INFO - [17083587] Calling AI provider: Mistral/summary
+2025-12-14 13:31:22,501 - endpoints - INFO - [17083587] AI response received in 5.42s
+2025-12-14 13:31:22,501 - endpoints - INFO - [17083587] Request processed successfully
+2025-12-14 13:31:22,502 - endpoints - INFO - [17082076] POST / - Status: 200 - Time: 5.420s
+2025-12-14 13:31:25,055 - endpoints - INFO - [25055229] POST / - Client: 127.0.0.1
+2025-12-14 13:31:25,056 - endpoints - INFO - [25056631] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 6 chars, Preview: 'Lonely'
+2025-12-14 13:31:25,057 - endpoints - INFO - [25056631] Validation successful
+2025-12-14 13:31:25,057 - endpoints - INFO - [25056631] Calling AI provider: Mistral/summary
+2025-12-14 13:31:25,057 - endpoints - INFO - [25056631] AI response received in 0.00s
+2025-12-14 13:31:25,057 - endpoints - INFO - [25056631] Request processed successfully
+2025-12-14 13:31:25,058 - endpoints - INFO - [25055229] POST / - Status: 200 - Time: 0.003s
+2025-12-14 13:31:35,336 - endpoints - INFO - [35336616] POST / - Client: 127.0.0.1
+2025-12-14 13:31:35,338 - endpoints - INFO - [35338060] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 6 chars, Preview: 'Lonely'
+2025-12-14 13:31:35,338 - endpoints - INFO - [35338060] Validation successful
+2025-12-14 13:31:35,338 - endpoints - INFO - [35338060] Calling AI provider: Mistral/summary
+2025-12-14 13:31:35,338 - endpoints - INFO - [35338060] AI response received in 0.00s
+2025-12-14 13:31:35,338 - endpoints - INFO - [35338060] Request processed successfully
+2025-12-14 13:31:35,339 - endpoints - INFO - [35336616] POST / - Status: 200 - Time: 0.003s
+2025-12-14 13:32:21,907 - endpoints - INFO - [21907319] POST / - Client: 127.0.0.1
+2025-12-14 13:32:21,908 - endpoints - INFO - [21908706] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 6 chars, Preview: 'Lonely'
+2025-12-14 13:32:21,908 - endpoints - INFO - [21908706] Validation successful
+2025-12-14 13:32:21,909 - endpoints - INFO - [21908706] Calling AI provider: Mistral/summary
+2025-12-14 13:32:21,909 - endpoints - INFO - [21908706] AI response received in 0.00s
+2025-12-14 13:32:21,909 - endpoints - INFO - [21908706] Request processed successfully
+2025-12-14 13:32:21,910 - endpoints - INFO - [21907319] POST / - Status: 200 - Time: 0.003s
+2025-12-14 13:32:24,545 - endpoints - INFO - [24545704] POST / - Client: 127.0.0.1
+2025-12-14 13:32:24,547 - endpoints - INFO - [24547055] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 6 chars, Preview: 'Lonely'
+2025-12-14 13:32:24,547 - endpoints - INFO - [24547055] Validation successful
+2025-12-14 13:32:24,547 - endpoints - INFO - [24547055] Calling AI provider: Mistral/summary
+2025-12-14 13:32:24,547 - endpoints - INFO - [24547055] AI response received in 0.00s
+2025-12-14 13:32:24,547 - endpoints - INFO - [24547055] Request processed successfully
+2025-12-14 13:32:24,548 - endpoints - INFO - [24545704] POST / - Status: 200 - Time: 0.003s
+2025-12-14 13:32:28,700 - endpoints - INFO - [28700088] POST / - Client: 127.0.0.1
+2025-12-14 13:32:28,701 - endpoints - INFO - [28701693] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 6 chars, Preview: 'Lonely'
+2025-12-14 13:32:28,702 - endpoints - INFO - [28701693] Validation successful
+2025-12-14 13:32:28,702 - endpoints - INFO - [28701693] Calling AI provider: Mistral/summary
+2025-12-14 13:32:28,702 - endpoints - INFO - [28701693] AI response received in 0.00s
+2025-12-14 13:32:28,702 - endpoints - INFO - [28701693] Request processed successfully
+2025-12-14 13:32:28,703 - endpoints - INFO - [28700088] POST / - Status: 200 - Time: 0.003s
+2025-12-14 13:36:27,430 - endpoints - INFO - [27430833] POST / - Client: 127.0.0.1
+2025-12-14 13:36:27,432 - endpoints - INFO - [27432856] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 6 chars, Preview: 'Lonely'
+2025-12-14 13:36:27,433 - endpoints - INFO - [27432856] Validation successful
+2025-12-14 13:36:27,433 - endpoints - INFO - [27432856] Calling AI provider: Mistral/summary
+2025-12-14 13:36:27,433 - endpoints - INFO - [27432856] AI response received in 0.00s
+2025-12-14 13:36:27,433 - endpoints - INFO - [27432856] Request processed successfully
+2025-12-14 13:36:27,440 - endpoints - INFO - [27430833] POST / - Status: 200 - Time: 0.010s
+2025-12-14 13:36:31,911 - endpoints - INFO - [31911250] POST / - Client: 127.0.0.1
+2025-12-14 13:36:31,912 - endpoints - INFO - [31912653] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 6 chars, Preview: 'Lonely'
+2025-12-14 13:36:31,912 - endpoints - INFO - [31912653] Validation successful
+2025-12-14 13:36:31,913 - endpoints - INFO - [31912653] Calling AI provider: Mistral/summary
+2025-12-14 13:36:31,913 - endpoints - INFO - [31912653] AI response received in 0.00s
+2025-12-14 13:36:31,913 - endpoints - INFO - [31912653] Request processed successfully
+2025-12-14 13:36:31,914 - endpoints - INFO - [31911250] POST / - Status: 200 - Time: 0.003s
+2025-12-14 13:36:34,901 - endpoints - INFO - [34901793] POST / - Client: 127.0.0.1
+2025-12-14 13:36:34,903 - endpoints - WARNING - [34903778] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:36:34,904 - endpoints - INFO - [34903778] Returning validation error page
+2025-12-14 13:36:34,905 - endpoints - INFO - [34901793] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:36:36,567 - endpoints - INFO - [36567824] POST / - Client: 127.0.0.1
+2025-12-14 13:36:36,569 - endpoints - WARNING - [36568996] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:36:36,569 - endpoints - INFO - [36568996] Returning validation error page
+2025-12-14 13:36:36,569 - endpoints - INFO - [36567824] POST / - Status: 422 - Time: 0.002s
+2025-12-14 13:36:37,242 - endpoints - INFO - [37242255] POST / - Client: 127.0.0.1
+2025-12-14 13:36:37,243 - endpoints - WARNING - [37243860] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:36:37,244 - endpoints - INFO - [37243860] Returning validation error page
+2025-12-14 13:36:37,245 - endpoints - INFO - [37242255] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:36:37,777 - endpoints - INFO - [37777461] POST / - Client: 127.0.0.1
+2025-12-14 13:36:37,779 - endpoints - WARNING - [37778975] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:36:37,779 - endpoints - INFO - [37778975] Returning validation error page
+2025-12-14 13:36:37,779 - endpoints - INFO - [37777461] POST / - Status: 422 - Time: 0.002s
+2025-12-14 13:36:42,395 - endpoints - INFO - [42395610] POST / - Client: 127.0.0.1
+2025-12-14 13:36:42,397 - endpoints - WARNING - [42397145] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:36:42,397 - endpoints - INFO - [42397145] Returning validation error page
+2025-12-14 13:36:42,398 - endpoints - INFO - [42395610] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:36:42,864 - endpoints - INFO - [42864727] POST / - Client: 127.0.0.1
+2025-12-14 13:36:42,865 - endpoints - WARNING - [42865776] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:36:42,866 - endpoints - INFO - [42865776] Returning validation error page
+2025-12-14 13:36:42,867 - endpoints - INFO - [42864727] POST / - Status: 422 - Time: 0.002s
+2025-12-14 13:36:44,779 - endpoints - INFO - [44778867] POST / - Client: 127.0.0.1
+2025-12-14 13:36:44,780 - endpoints - WARNING - [44780549] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:36:44,780 - endpoints - INFO - [44780549] Returning validation error page
+2025-12-14 13:36:44,781 - endpoints - INFO - [44778867] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:36:53,283 - endpoints - INFO - [53283592] POST / - Client: 127.0.0.1
+2025-12-14 13:36:53,285 - endpoints - WARNING - [53285291] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:36:53,285 - endpoints - INFO - [53285291] Returning validation error page
+2025-12-14 13:36:53,286 - endpoints - INFO - [53283592] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:36:58,933 - endpoints - INFO - [58933173] POST / - Client: 127.0.0.1
+2025-12-14 13:36:58,935 - endpoints - WARNING - [58935025] RequestValidationError: [{'type': 'missing', 'loc': ('body', 'message'), 'msg': 'Field required', 'input': None}]
+2025-12-14 13:36:58,935 - endpoints - INFO - [58935025] Returning validation error page
+2025-12-14 13:36:58,936 - endpoints - INFO - [58933173] POST / - Status: 422 - Time: 0.003s
+2025-12-14 13:43:08,290 - endpoints - INFO - [08290321] POST / - Client: 127.0.0.1
+2025-12-14 13:43:08,293 - endpoints - INFO - [08293021] POST / - Processing request | Model: GPT-OSS, Mode: labels, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:43:08,293 - endpoints - INFO - [08293021] Validation successful
+2025-12-14 13:43:08,293 - endpoints - INFO - [08293021] Calling AI provider: GPT-OSS/labels
+2025-12-14 13:43:10,797 - endpoints - WARNING - [08293021] HTTPException from AI provider: Status: 502, Detail: AI service returned error: 429
+2025-12-14 13:43:10,797 - endpoints - ERROR - [08293021] HTTP error from provider | Status: 502, Detail: AI service returned error: 429 | User model: GPT-OSS, mode: labels
+2025-12-14 13:43:10,797 - endpoints - INFO - [08290321] POST / - Status: 502 - Time: 2.507s
+2025-12-14 13:43:21,363 - endpoints - INFO - [21363756] POST / - Client: 127.0.0.1
+2025-12-14 13:43:21,365 - endpoints - INFO - [21365727] POST / - Processing request | Model: GPT-OSS, Mode: labels, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:43:21,366 - endpoints - INFO - [21365727] Validation successful
+2025-12-14 13:43:21,366 - endpoints - INFO - [21365727] Calling AI provider: GPT-OSS/labels
+2025-12-14 13:43:23,627 - endpoints - WARNING - [21365727] HTTPException from AI provider: Status: 502, Detail: AI service returned error: 429
+2025-12-14 13:43:23,627 - endpoints - ERROR - [21365727] HTTP error from provider | Status: 502, Detail: AI service returned error: 429 | User model: GPT-OSS, mode: labels
+2025-12-14 13:43:23,628 - endpoints - INFO - [21363756] POST / - Status: 502 - Time: 2.264s
+2025-12-14 13:43:30,532 - endpoints - INFO - [30532622] POST / - Client: 127.0.0.1
+2025-12-14 13:43:30,534 - endpoints - INFO - [30534717] POST / - Processing request | Model: Mistral, Mode: labels, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:43:30,535 - endpoints - INFO - [30534717] Validation successful
+2025-12-14 13:43:30,535 - endpoints - INFO - [30534717] Calling AI provider: Mistral/labels
+2025-12-14 13:43:33,261 - endpoints - INFO - [30534717] AI response received in 2.73s
+2025-12-14 13:43:33,261 - endpoints - INFO - [30534717] Request processed successfully
+2025-12-14 13:43:33,262 - endpoints - INFO - [30532622] POST / - Status: 200 - Time: 2.729s
+2025-12-14 13:43:55,641 - endpoints - INFO - [55641467] POST / - Client: 127.0.0.1
+2025-12-14 13:43:55,643 - endpoints - INFO - [55643157] POST / - Processing request | Model: GPT-OSS, Mode: labels, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:43:55,643 - endpoints - INFO - [55643157] Validation successful
+2025-12-14 13:43:55,643 - endpoints - INFO - [55643157] Calling AI provider: GPT-OSS/labels
+2025-12-14 13:43:57,199 - endpoints - WARNING - [55643157] HTTPException from AI provider: Status: 502, Detail: AI service returned error: 429
+2025-12-14 13:43:57,199 - endpoints - ERROR - [55643157] HTTP error from provider | Status: 502, Detail: AI service returned error: 429 | User model: GPT-OSS, mode: labels
+2025-12-14 13:43:57,200 - endpoints - INFO - [55641467] POST / - Status: 502 - Time: 1.559s
+2025-12-14 13:44:12,275 - endpoints - INFO - [12275100] POST / - Client: 127.0.0.1
+2025-12-14 13:44:12,277 - endpoints - INFO - [12277265] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:44:12,277 - endpoints - INFO - [12277265] Validation successful
+2025-12-14 13:44:12,278 - endpoints - INFO - [12277265] Calling AI provider: Mistral/summary
+2025-12-14 13:44:13,154 - endpoints - WARNING - [12277265] HTTPException from AI provider: Status: 502, Detail: AI service returned error: 429
+2025-12-14 13:44:13,154 - endpoints - ERROR - [12277265] HTTP error from provider | Status: 502, Detail: AI service returned error: 429 | User model: Mistral, mode: summary
+2025-12-14 13:44:13,155 - endpoints - INFO - [12275100] POST / - Status: 502 - Time: 0.880s
+2025-12-14 13:44:16,873 - endpoints - INFO - [16873707] POST / - Client: 127.0.0.1
+2025-12-14 13:44:16,875 - endpoints - INFO - [16875716] POST / - Processing request | Model: Chimera, Mode: summary, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:44:16,876 - endpoints - INFO - [16875716] Validation successful
+2025-12-14 13:44:16,876 - endpoints - INFO - [16875716] Calling AI provider: Chimera/summary
+2025-12-14 13:44:26,091 - endpoints - INFO - [16875716] AI response received in 9.22s
+2025-12-14 13:44:26,091 - endpoints - INFO - [16875716] Request processed successfully
+2025-12-14 13:44:26,092 - endpoints - INFO - [16873707] POST / - Status: 200 - Time: 9.219s
+2025-12-14 13:44:50,938 - endpoints - INFO - [50938442] POST / - Client: 127.0.0.1
+2025-12-14 13:44:50,940 - endpoints - INFO - [50940096] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:44:50,940 - endpoints - INFO - [50940096] Validation successful
+2025-12-14 13:44:50,940 - endpoints - INFO - [50940096] Calling AI provider: Mistral/summary
+2025-12-14 13:44:52,934 - endpoints - INFO - [50940096] AI response received in 1.99s
+2025-12-14 13:44:52,934 - endpoints - INFO - [50940096] Request processed successfully
+2025-12-14 13:44:52,935 - endpoints - INFO - [50938442] POST / - Status: 200 - Time: 1.997s
+2025-12-14 13:46:27,459 - __main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:46:27,459 - __main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:46:27,459 - __main__ - INFO - Number of models configured: 3
+2025-12-14 13:46:27,467 - __main__ - INFO - ==================================================
+2025-12-14 13:46:27,467 - __main__ - INFO - Starting FastAPI application
+2025-12-14 13:46:27,467 - __main__ - INFO - ==================================================
+2025-12-14 13:46:28,594 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:46:28,594 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:46:28,594 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 13:46:28,663 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:46:28,663 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:46:28,663 - endpoints - INFO - Number of models configured: 3
+2025-12-14 13:46:32,569 - endpoints - INFO - [32569708] POST / - Client: 127.0.0.1
+2025-12-14 13:46:32,576 - endpoints - INFO - [32576742] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:46:32,577 - endpoints - INFO - [32576742] Validation successful
+2025-12-14 13:46:32,577 - endpoints - INFO - [32576742] Calling AI provider: Mistral/summary
+2025-12-14 13:46:34,481 - endpoints - INFO - [32576742] AI response received in 1.90s
+2025-12-14 13:46:34,481 - endpoints - INFO - [32576742] Request processed successfully
+2025-12-14 13:46:34,509 - endpoints - INFO - [32569708] POST / - Status: 200 - Time: 1.940s
+2025-12-14 13:46:35,888 - endpoints - INFO - [35888784] POST / - Client: 127.0.0.1
+2025-12-14 13:46:35,892 - endpoints - INFO - [35892044] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:46:35,892 - endpoints - INFO - [35892044] Validation successful
+2025-12-14 13:46:35,892 - endpoints - INFO - [35892044] Calling AI provider: Mistral/summary
+2025-12-14 13:46:35,892 - endpoints - INFO - [35892044] AI response received in 0.00s
+2025-12-14 13:46:35,893 - endpoints - INFO - [35892044] Request processed successfully
+2025-12-14 13:46:35,894 - endpoints - INFO - [35888784] POST / - Status: 200 - Time: 0.006s
+2025-12-14 13:46:37,724 - endpoints - INFO - [37724654] POST / - Client: 127.0.0.1
+2025-12-14 13:46:37,726 - endpoints - INFO - [37726536] POST / - Processing request | Model: Chimera, Mode: summary, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:46:37,726 - endpoints - INFO - [37726536] Validation successful
+2025-12-14 13:46:37,727 - endpoints - INFO - [37726536] Calling AI provider: Chimera/summary
+2025-12-14 13:46:47,681 - endpoints - INFO - [37726536] AI response received in 9.95s
+2025-12-14 13:46:47,682 - endpoints - INFO - [37726536] Request processed successfully
+2025-12-14 13:46:47,683 - endpoints - INFO - [37724654] POST / - Status: 200 - Time: 9.959s
+2025-12-14 13:46:49,854 - endpoints - INFO - [49854844] POST / - Client: 127.0.0.1
+2025-12-14 13:46:49,857 - endpoints - INFO - [49857286] POST / - Processing request | Model: GPT-OSS, Mode: summary, Message length: 70 chars, Preview: '22-го числа я встаю в 8 и должна быть на утреннике...'
+2025-12-14 13:46:49,857 - endpoints - INFO - [49857286] Validation successful
+2025-12-14 13:46:49,858 - endpoints - INFO - [49857286] Calling AI provider: GPT-OSS/summary
+2025-12-14 13:46:51,292 - endpoints - WARNING - [49857286] HTTPException from AI provider: Status: 502, Detail: AI service returned error: 429
+2025-12-14 13:46:51,293 - endpoints - ERROR - [49857286] HTTP error from provider | Status: 502, Detail: AI service returned error: 429 | User model: GPT-OSS, mode: summary
+2025-12-14 13:46:51,293 - endpoints - INFO - [49854844] POST / - Status: 502 - Time: 1.439s
+2025-12-14 13:51:27,751 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:51:27,751 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:51:27,751 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 13:51:29,698 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:51:29,699 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:51:29,699 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 13:51:29,771 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:51:29,771 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:51:29,771 - endpoints - INFO - Number of models configured: 3
+2025-12-14 13:56:27,671 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:56:27,671 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:56:27,671 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 13:56:27,731 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 13:56:27,731 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 13:56:27,731 - endpoints - INFO - Number of models configured: 3
+2025-12-14 14:02:29,589 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:02:29,589 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:02:29,589 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 14:02:29,597 - __main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:02:29,597 - __main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:02:29,597 - __main__ - INFO - Number of models configured: 3
+2025-12-14 14:02:29,601 - __main__ - INFO - ==================================================
+2025-12-14 14:02:29,601 - __main__ - INFO - Starting FastAPI application
+2025-12-14 14:02:29,601 - __main__ - INFO - ==================================================
+2025-12-14 14:02:30,623 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:02:30,623 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:02:30,623 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 14:02:30,630 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:02:30,631 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:02:30,631 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 14:02:30,700 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:02:30,700 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:02:30,700 - endpoints - INFO - Number of models configured: 3
+2025-12-14 14:02:34,439 - endpoints - INFO - [34438861] GET / - Client: 127.0.0.1
+2025-12-14 14:02:34,442 - endpoints - INFO - [34442198] GET / - Rendering form
+2025-12-14 14:02:34,442 - endpoints - INFO - [34442198] Form rendered successfully
+2025-12-14 14:02:34,489 - endpoints - INFO - [34438861] GET / - Status: 200 - Time: 0.051s
+2025-12-14 14:02:36,911 - endpoints - INFO - [36911150] POST / - Client: 127.0.0.1
+2025-12-14 14:02:36,919 - endpoints - INFO - [36919361] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 16 chars, Preview: 'I can't sleep...'
+2025-12-14 14:02:36,919 - endpoints - INFO - [36919361] Validation successful
+2025-12-14 14:02:36,919 - endpoints - INFO - [36919361] Calling AI provider: Mistral/summary
+2025-12-14 14:02:38,620 - endpoints - INFO - [36919361] AI response received in 1.70s
+2025-12-14 14:02:38,620 - endpoints - INFO - [36919361] Request processed successfully
+2025-12-14 14:02:38,620 - endpoints - INFO - [36911150] POST / - Status: 200 - Time: 1.710s
+2025-12-14 14:07:29,406 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:07:29,406 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:07:29,406 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 14:07:29,409 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:07:29,409 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:07:29,410 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 14:07:30,028 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:07:30,029 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:07:30,029 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 14:07:30,032 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:07:30,032 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:07:30,032 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 14:07:30,061 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:07:30,061 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:07:30,061 - endpoints - INFO - Number of models configured: 3
+2025-12-14 14:27:21,593 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:27:21,593 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:27:21,593 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 14:27:21,600 - __main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:27:21,600 - __main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:27:21,601 - __main__ - INFO - Number of models configured: 3
+2025-12-14 14:27:21,603 - __main__ - INFO - ==================================================
+2025-12-14 14:27:21,603 - __main__ - INFO - Starting FastAPI application
+2025-12-14 14:27:21,603 - __main__ - INFO - ==================================================
+2025-12-14 14:27:22,158 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:27:22,158 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:27:22,158 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 14:27:22,161 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:27:22,162 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:27:22,162 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 14:27:22,192 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 14:27:22,192 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 14:27:22,192 - endpoints - INFO - Number of models configured: 3
+2025-12-14 14:27:24,467 - endpoints - INFO - [24467089] GET / - Client: 127.0.0.1
+2025-12-14 14:27:24,468 - endpoints - INFO - [24468893] GET / - Rendering form
+2025-12-14 14:27:24,469 - endpoints - INFO - [24468893] Form rendered successfully
+2025-12-14 14:27:24,488 - endpoints - INFO - [24467089] GET / - Status: 200 - Time: 0.021s
+2025-12-14 14:27:25,874 - endpoints - INFO - [25874073] POST / - Client: 127.0.0.1
+2025-12-14 14:27:25,876 - endpoints - INFO - [25876163] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 16 chars, Preview: 'I can't sleep...'
+2025-12-14 14:27:25,876 - endpoints - INFO - [25876163] Validation successful
+2025-12-14 14:27:25,876 - endpoints - INFO - [25876163] Calling AI provider: Mistral/summary
+2025-12-14 14:27:27,167 - endpoints - INFO - [25876163] AI response received in 1.29s
+2025-12-14 14:27:27,167 - endpoints - INFO - [25876163] Request processed successfully
+2025-12-14 14:27:27,167 - endpoints - INFO - [25874073] POST / - Status: 200 - Time: 1.294s
+2025-12-14 16:48:36,666 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:36,667 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:36,667 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 16:48:36,673 - __main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:36,673 - __main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:36,673 - __main__ - INFO - Number of models configured: 3
+2025-12-14 16:48:36,676 - __main__ - INFO - ==================================================
+2025-12-14 16:48:36,676 - __main__ - INFO - Starting FastAPI application
+2025-12-14 16:48:36,676 - __main__ - INFO - ==================================================
+2025-12-14 16:48:37,269 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:37,269 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:37,269 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 16:48:37,273 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:37,273 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:37,273 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 16:48:37,307 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:37,307 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:37,307 - endpoints - INFO - Number of models configured: 3
+2025-12-14 16:48:39,483 - endpoints - INFO - [39483335] GET / - Client: 127.0.0.1
+2025-12-14 16:48:39,484 - endpoints - INFO - [39484550] GET / - Rendering form
+2025-12-14 16:48:39,484 - endpoints - INFO - [39484550] Form rendered successfully
+2025-12-14 16:48:39,484 - endpoints - ERROR - [39484550] Error in form rendering: 'index.html' not found in search path: 'app/templates'
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 91, in form
+    return templates.TemplateResponse("index.html", default_context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'index.html' not found in search path: 'app/templates'
+2025-12-14 16:48:39,488 - endpoints - ERROR - [39483335] GET / - Exception: 'error.html' not found in search path: 'app/templates' - Time: 0.005s
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 91, in form
+    return templates.TemplateResponse("index.html", default_context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'index.html' not found in search path: 'app/templates'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 327, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 106, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 430, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\app\endpoints.py", line 95, in form
+    return templates.TemplateResponse("error.html", {
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+        "request": request,
+        ^^^^^^^^^^^^^^^^^^^
+        "error": "Service temporarily unavailable"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    }, status_code=500)
+    ^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 209, in TemplateResponse
+    template = self.get_template(name)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\templating.py", line 132, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'error.html' not found in search path: 'app/templates'
+2025-12-14 16:48:47,205 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:47,205 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:47,205 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 16:48:47,211 - __main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:47,211 - __main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:47,211 - __main__ - INFO - Number of models configured: 3
+2025-12-14 16:48:47,214 - __main__ - INFO - ==================================================
+2025-12-14 16:48:47,214 - __main__ - INFO - Starting FastAPI application
+2025-12-14 16:48:47,214 - __main__ - INFO - ==================================================
+2025-12-14 16:48:47,771 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:47,771 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:47,771 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 16:48:47,775 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:47,775 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:47,775 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 16:48:47,806 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 16:48:47,806 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 16:48:47,806 - endpoints - INFO - Number of models configured: 3
+2025-12-14 16:48:50,139 - endpoints - INFO - [50139221] GET / - Client: 127.0.0.1
+2025-12-14 16:48:50,140 - endpoints - INFO - [50140935] GET / - Rendering form
+2025-12-14 16:48:50,141 - endpoints - INFO - [50140935] Form rendered successfully
+2025-12-14 16:48:50,164 - endpoints - INFO - [50139221] GET / - Status: 200 - Time: 0.025s
+2025-12-14 19:17:29,200 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:17:29,200 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:17:29,200 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 19:17:29,204 - __main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:17:29,204 - __main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:17:29,204 - __main__ - INFO - Number of models configured: 3
+2025-12-14 19:17:29,208 - __main__ - INFO - ==================================================
+2025-12-14 19:17:29,208 - __main__ - INFO - Starting FastAPI application
+2025-12-14 19:17:29,208 - __main__ - INFO - ==================================================
+2025-12-14 19:17:29,967 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:17:29,967 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:17:29,967 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 19:17:29,971 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:17:29,971 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:17:29,971 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 19:17:30,005 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:17:30,006 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:17:30,006 - endpoints - INFO - Number of models configured: 3
+2025-12-14 19:17:32,086 - endpoints - INFO - [32086578] GET / - Client: 127.0.0.1
+2025-12-14 19:17:32,088 - endpoints - INFO - [32088628] GET / - Rendering form
+2025-12-14 19:17:32,088 - endpoints - INFO - [32088628] Form rendered successfully
+2025-12-14 19:17:32,110 - endpoints - INFO - [32086578] GET / - Status: 200 - Time: 0.024s
+2025-12-14 19:17:34,946 - endpoints - INFO - [34946508] POST / - Client: 127.0.0.1
+2025-12-14 19:17:34,949 - endpoints - INFO - [34949550] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 16 chars, Preview: 'I can't sleep...'
+2025-12-14 19:17:34,949 - endpoints - INFO - [34949550] Validation successful
+2025-12-14 19:17:34,949 - endpoints - INFO - [34949550] Calling AI provider: Mistral/summary
+2025-12-14 19:17:39,732 - endpoints - WARNING - [34949550] HTTPException from AI provider: Status: 502, Detail: AI service returned error: 429
+2025-12-14 19:17:39,732 - endpoints - ERROR - [34949550] HTTP error from provider | Status: 502, Detail: AI service returned error: 429 | User model: Mistral, mode: summary
+2025-12-14 19:17:39,732 - endpoints - ERROR - [34946508] POST / - Exception: 'original_text' - Time: 4.786s
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\providers\model.py", line 140, in analyze
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\httpx\_models.py", line 749, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://httpstatuses.com/429
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 155, in get_ai_response
+    raise http_exc
+  File "E:\Python\testovoe\app\endpoints.py", line 140, in get_ai_response
+    ai_output, from_cache = await provider.analyze(
+                            ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\Python\testovoe\app\providers\model.py", line 186, in analyze
+    raise HTTPException(status_code=502, detail=f"AI service returned error: {e.response.status_code}")
+fastapi.exceptions.HTTPException: 502: AI service returned error: 429
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Python\testovoe\app\endpoints.py", line 334, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\Python\testovoe\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 106, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 430, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\Python\testovoe\.venv\Lib\site-packages\fastapi\routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\testovoe\app\endpoints.py", line 224, in get_ai_response
+    "original_text": form_data["original_text"],
+                     ~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'original_text'
+2025-12-14 19:18:35,519 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:18:35,519 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:18:35,519 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 19:18:35,524 - __main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:18:35,524 - __main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:18:35,524 - __main__ - INFO - Number of models configured: 3
+2025-12-14 19:18:35,528 - __main__ - INFO - ==================================================
+2025-12-14 19:18:35,528 - __main__ - INFO - Starting FastAPI application
+2025-12-14 19:18:35,528 - __main__ - INFO - ==================================================
+2025-12-14 19:18:36,154 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:18:36,155 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:18:36,155 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 19:18:36,158 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:18:36,158 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:18:36,158 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 19:18:36,191 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:18:36,192 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:18:36,192 - endpoints - INFO - Number of models configured: 3
+2025-12-14 19:18:38,134 - endpoints - INFO - [38134358] GET / - Client: 127.0.0.1
+2025-12-14 19:18:38,135 - endpoints - INFO - [38135790] GET / - Rendering form
+2025-12-14 19:18:38,135 - endpoints - INFO - [38135790] Form rendered successfully
+2025-12-14 19:18:38,159 - endpoints - INFO - [38134358] GET / - Status: 200 - Time: 0.025s
+2025-12-14 19:18:39,570 - endpoints - INFO - [39570168] POST / - Client: 127.0.0.1
+2025-12-14 19:18:39,572 - endpoints - INFO - [39572295] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 16 chars, Preview: 'I can't sleep...'
+2025-12-14 19:18:39,572 - endpoints - INFO - [39572295] Validation successful
+2025-12-14 19:18:39,572 - endpoints - INFO - [39572295] Calling AI provider: Mistral/summary
+2025-12-14 19:18:49,234 - endpoints - INFO - [39572295] AI response received in 9.66s
+2025-12-14 19:18:49,234 - endpoints - INFO - [39572295] Request processed successfully
+2025-12-14 19:18:49,245 - endpoints - INFO - [39570168] POST / - Status: 200 - Time: 9.675s
+2025-12-14 19:19:41,266 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:19:41,267 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:19:41,267 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 19:19:41,273 - __main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:19:41,273 - __main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:19:41,273 - __main__ - INFO - Number of models configured: 3
+2025-12-14 19:19:41,275 - __main__ - INFO - ==================================================
+2025-12-14 19:19:41,276 - __main__ - INFO - Starting FastAPI application
+2025-12-14 19:19:41,276 - __main__ - INFO - ==================================================
+2025-12-14 19:19:41,945 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:19:41,945 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:19:41,945 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 19:19:41,949 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:19:41,949 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:19:41,949 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 19:19:41,981 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:19:41,981 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:19:41,981 - endpoints - INFO - Number of models configured: 3
+2025-12-14 19:19:48,168 - endpoints - INFO - [48168203] GET / - Client: 127.0.0.1
+2025-12-14 19:19:48,169 - endpoints - INFO - [48169769] GET / - Rendering form
+2025-12-14 19:19:48,169 - endpoints - INFO - [48169769] Form rendered successfully
+2025-12-14 19:19:48,188 - endpoints - INFO - [48168203] GET / - Status: 200 - Time: 0.020s
+2025-12-14 19:19:49,910 - endpoints - INFO - [49910819] POST / - Client: 127.0.0.1
+2025-12-14 19:19:49,912 - endpoints - INFO - [49912963] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 16 chars, Preview: 'I can't sleep...'
+2025-12-14 19:19:49,913 - endpoints - INFO - [49912963] Validation successful
+2025-12-14 19:19:49,913 - endpoints - INFO - [49912963] Calling AI provider: Mistral/summary
+2025-12-14 19:19:59,601 - endpoints - INFO - [49912963] AI response received in 9.69s
+2025-12-14 19:19:59,602 - endpoints - INFO - [49912963] Request processed successfully
+2025-12-14 19:19:59,607 - endpoints - INFO - [49910819] POST / - Status: 200 - Time: 9.696s
+2025-12-14 19:20:05,107 - endpoints - INFO - [05107548] POST / - Client: 127.0.0.1
+2025-12-14 19:20:05,108 - endpoints - INFO - [05108282] POST / - Processing request | Model: Mistral, Mode: summary, Message length: 16 chars, Preview: 'I can't sleep...'
+2025-12-14 19:20:05,108 - endpoints - INFO - [05108282] Validation successful
+2025-12-14 19:20:05,108 - endpoints - INFO - [05108282] Calling AI provider: Mistral/summary
+2025-12-14 19:20:14,510 - endpoints - INFO - [05108282] AI response received in 9.40s
+2025-12-14 19:20:14,510 - endpoints - INFO - [05108282] Request processed successfully
+2025-12-14 19:20:14,514 - endpoints - INFO - [05107548] POST / - Status: 200 - Time: 9.407s
+2025-12-14 19:20:16,589 - endpoints - INFO - [16589629] POST / - Client: 127.0.0.1
+2025-12-14 19:20:16,590 - endpoints - INFO - [16590332] POST / - Processing request | Model: GPT-OSS, Mode: summary, Message length: 16 chars, Preview: 'I can't sleep...'
+2025-12-14 19:20:16,590 - endpoints - INFO - [16590332] Validation successful
+2025-12-14 19:20:16,590 - endpoints - INFO - [16590332] Calling AI provider: GPT-OSS/summary
+2025-12-14 19:20:21,811 - endpoints - WARNING - [16590332] HTTPException from AI provider: Status: 502, Detail: AI service returned error: 429
+2025-12-14 19:20:21,811 - endpoints - ERROR - [16590332] HTTP error from provider | Status: 502, Detail: AI service returned error: 429 | User model: GPT-OSS, mode: summary
+2025-12-14 19:20:21,811 - endpoints - INFO - [16589629] POST / - Status: 502 - Time: 5.222s
+2025-12-14 19:21:03,733 - endpoints - INFO - [03733588] POST / - Client: 127.0.0.1
+2025-12-14 19:21:03,734 - endpoints - INFO - [03734314] POST / - Processing request | Model: GPT-OSS, Mode: summary, Message length: 16 chars, Preview: 'I can't sleep...'
+2025-12-14 19:21:03,734 - endpoints - INFO - [03734314] Validation successful
+2025-12-14 19:21:03,734 - endpoints - INFO - [03734314] Calling AI provider: GPT-OSS/summary
+2025-12-14 19:21:09,385 - endpoints - WARNING - [03734314] HTTPException from AI provider: Status: 502, Detail: AI service returned error: 429
+2025-12-14 19:21:09,385 - endpoints - ERROR - [03734314] HTTP error from provider | Status: 502, Detail: AI service returned error: 429 | User model: GPT-OSS, mode: summary
+2025-12-14 19:21:09,385 - endpoints - INFO - [03733588] POST / - Status: 502 - Time: 5.652s
+2025-12-14 19:21:19,699 - endpoints - INFO - [19699051] POST / - Client: 127.0.0.1
+2025-12-14 19:21:19,699 - endpoints - INFO - [19699690] POST / - Processing request | Model: Mistral, Mode: labels, Message length: 16 chars, Preview: 'I can't sleep...'
+2025-12-14 19:21:19,699 - endpoints - INFO - [19699690] Validation successful
+2025-12-14 19:21:19,699 - endpoints - INFO - [19699690] Calling AI provider: Mistral/labels
+2025-12-14 19:21:30,384 - endpoints - INFO - [19699690] AI response received in 10.69s
+2025-12-14 19:21:30,385 - endpoints - INFO - [19699690] Request processed successfully
+2025-12-14 19:21:30,388 - endpoints - INFO - [19699051] POST / - Status: 200 - Time: 10.689s
+2025-12-14 19:29:41,523 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:29:41,524 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:29:41,524 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 19:29:41,528 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:29:41,528 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:29:41,528 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 19:29:41,560 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:29:41,560 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:29:41,560 - endpoints - INFO - Number of models configured: 3
+2025-12-14 19:30:38,174 - app.endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:30:38,175 - app.endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:30:38,175 - app.endpoints - INFO - Number of models configured: 3
+2025-12-14 19:30:38,178 - __mp_main__ - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:30:38,178 - __mp_main__ - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:30:38,178 - __mp_main__ - INFO - Number of models configured: 3
+2025-12-14 19:30:38,210 - endpoints - INFO - Available models: ['Mistral', 'Chimera', 'GPT-OSS']
+2025-12-14 19:30:38,210 - endpoints - INFO - Available modes: ['Labels', 'Summary']
+2025-12-14 19:30:38,210 - endpoints - INFO - Number of models configured: 3
